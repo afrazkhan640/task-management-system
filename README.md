@@ -97,20 +97,28 @@ Protected REST APIs
 ## 📌 REST API Endpoints
 
 ### Authentication APIs
+
 | Method | Endpoint | Description |
 |---------|----------|-------------|
-| POST | /auth/register | Register a new user |
-| POST | /auth/login | Authenticate user and generate JWT |
+| POST | `/auth/register` | Register a new user |
+| POST | `/auth/login` | Authenticate user and generate JWT |
 
 ### Task APIs
 
 | Method | Endpoint | Description |
 |---------|----------|-------------|
-| POST | /task | Create a new task |
-| GET | /task | Get all tasks |
-| GET | /task/{id} | Get task by ID |
-| PUT | /task/{id} | Update task |
-| DELETE | /task/{id} | Delete task |
+| POST | `/task` | Create a new task |
+| GET | `/task` | Get all tasks (Paginated) |
+| GET | `/task/{id}` | Get task by ID |
+| PUT | `/task/{id}` | Update task |
+| DELETE | `/task/{id}` | Delete task |
+
+### Task Workflow APIs
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| PATCH | `/task/start/{id}` | Change task status to **IN_PROGRESS** |
+| PATCH | `/task/complete/{id}` | Change task status to **COMPLETED** |
 
 
 ## ▶️ How to Run
